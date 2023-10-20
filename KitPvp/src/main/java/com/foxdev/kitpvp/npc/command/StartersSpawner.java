@@ -19,6 +19,7 @@ public class StartersSpawner implements CommandExecutor {
 
 
             villager.setAI(false);
+            villager.setPersistent(true);
 
             villager.setCustomName("Starter Villager");
 

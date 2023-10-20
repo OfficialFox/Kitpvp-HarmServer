@@ -29,12 +29,14 @@ public class PlayerListeners implements Listener {
     @EventHandler
     public void onDeath(PlayerDeathEvent event) {
         Player player = event.getEntity();
+        Player killer = player.getKiller();
+
+        if(killer != null){
+            killer.getInventory().addItem(new ItemStack(Material.GOLDEN_APPLE, 1));
+
+        }
 
         player.getInventory().clear();
-
-
-        player.getInventory().addItem(new ItemStack(Material.GOLDEN_APPLE, 1));
-
 
         event.setDroppedExp(0);
         event.getDrops().clear();

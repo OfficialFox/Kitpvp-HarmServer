@@ -23,6 +23,7 @@ public class starterskit implements CommandExecutor {
 
 
         player.getInventory().setItem(0, new ItemStack(Material.IRON_SWORD, 1));
+        player.getInventory().setItem(2,new ItemStack(Material.BLAZE_ROD,1));
         player.getInventory().setItem(9, new ItemStack(Material.BREAD, 8));
         player.getInventory().setItem(8, new ItemStack(Material.GOLDEN_APPLE, 3));
         player.getInventory().setItem(1, new ItemStack(Material.BOW, 1));
