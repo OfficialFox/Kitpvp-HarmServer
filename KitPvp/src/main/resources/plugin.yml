@@ -1,0 +1,7 @@
+name: KitPvp
+version: '${project.version}'
+main: com.foxdev.kitpvp.KitPvp
+api-version: '1.19'
+commands:
+  starters:
+  startersnpc:
