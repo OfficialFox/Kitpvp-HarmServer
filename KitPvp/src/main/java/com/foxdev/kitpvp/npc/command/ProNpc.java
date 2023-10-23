@@ -7,7 +7,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.entity.Villager;
 
-public class StartersSpawner implements CommandExecutor {
+public class ProNpc implements CommandExecutor {
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
 
@@ -15,17 +15,17 @@ public class StartersSpawner implements CommandExecutor {
         Player player = (Player) sender;
         Location loc = player.getLocation();
 
-            Villager villager = loc.getWorld().spawn(loc, Villager.class);
+        Villager villager = loc.getWorld().spawn(loc, Villager.class);
 
 
-            villager.setAI(false);
-            villager.setPersistent(true);
+        villager.setAI(false);
+        villager.setPersistent(true);
+        villager.setInvulnerable(true);
+        villager.setCollidable(false);
+        villager.setNoDamageTicks(Integer.MAX_VALUE);
 
-            villager.setCustomName("Starter Villager");
+        villager.setCustomName("Pro Villager");
 
-            return true;
-        }
-
+        return true;
     }
-
-
+}
